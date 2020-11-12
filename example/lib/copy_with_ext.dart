@@ -1,5 +1,33 @@
+import 'package:example/example3.dart';
 import 'package:example/example2.dart';
 import 'package:example/example.dart';
+
+extension ContainerCopyWithExt<T> on Container<T> {
+  Container<T> copyWith({
+    int length,
+    T value,
+  }) {
+    length ??= this.length;
+    value ??= this.value;
+
+    return Container<T>(
+      length,
+      value,
+    );
+  }
+}
+
+extension StackCopyWithExt<T extends num> on Stack<T> {
+  Stack<T> copyWith({
+    T value,
+  }) {
+    value ??= this.value;
+
+    return Stack<T>(
+      value,
+    );
+  }
+}
 
 extension PersonCopyWithExt on Person {
   Person copyWith({
