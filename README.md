@@ -36,3 +36,9 @@ pub global activate copy_with_gen
 cd $poject_dir
 copy_gen
 ```
+
+Then, it will make `copy_with_ext.dart` in your project.
+
+## LICENSE
+
+MIT Style
