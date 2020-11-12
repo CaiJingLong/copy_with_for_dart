@@ -13,14 +13,7 @@ void main(List<String> args) {
 }
 
 void makeExtensionFile(Package pkg) {
-  final libFiles = pkg.packageDir.childDir('lib');
-
-  final filePathList = libFiles
-      .listSync(recursive: true)
-      .whereType<File>()
-      .where((element) => element.name.endsWith('.dart'))
-      .map((e) => e.absolute.path)
-      .toList();
+  final filePathList = pkg.dartSources.map((e) => e.absolute.path).toList();
 
   final classess = AnalyzerUtils.findCopyWith(pkg, filePathList);
 
