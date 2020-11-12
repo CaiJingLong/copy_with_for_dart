@@ -146,19 +146,6 @@ String makeReturnParams(
   return sb.toString();
 }
 
-class CopyWithExample {
-  final String name, age;
-
-  CopyWithExample(
-    this.age, {
-    this.name,
-  });
-}
-
-extension CopyWithExampleCopyWithExt on CopyWithExample {
-  CopyWithExample copyWith({String name, String age}) {}
-}
-
 String makeImport(ClassResult classResult) {
   final pkg = classResult.package;
   final lib = pkg.packageDir.childDir('lib');
