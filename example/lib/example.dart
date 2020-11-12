@@ -11,3 +11,10 @@ class CopyWithExample {
     this.amont,
   });
 }
+
+@copyWith
+class Entity {
+  Entity(this.firstName);
+
+  final String firstName;
+}

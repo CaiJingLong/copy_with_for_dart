@@ -64,3 +64,15 @@ extension CopyWithExampleCopyWithExt on CopyWithExample {
     );
   }
 }
+
+extension EntityCopyWithExt on Entity {
+  Entity copyWith({
+    String firstName,
+  }) {
+    firstName ??= this.firstName;
+
+    return Entity(
+      firstName,
+    );
+  }
+}
